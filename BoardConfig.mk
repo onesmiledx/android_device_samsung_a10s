@@ -1,3 +1,4 @@
+1
 # Common
 DEVICE_PATH := device/samsung/a10s
 BOARD_VENDOR := samsung
