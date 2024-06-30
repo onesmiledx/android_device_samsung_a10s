@@ -1,6 +1,3 @@
-## Inherit proprietary vendor configuartion
-include vendor/samsung/a10s/BoardConfigVendor.mk
-
 # Common
 DEVICE_PATH := device/samsung/a10s
 BOARD_VENDOR := samsung
@@ -43,7 +40,6 @@ TARGET_HWC2_NO_SKIPVALIDATE := true
 # Graphics
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
-BOARD_USES_EXYNOS5_COMMON_GRALLOC := true
 TARGET_USES_HWC2 := true
 
 # Kernel
@@ -184,5 +180,5 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 # OTA Assert
-TARGET_OTA_ASSERT_DEVICE := a10s
+TARGET_OTA_ASSERT_DEVICE := a10s,a10sxx
 
