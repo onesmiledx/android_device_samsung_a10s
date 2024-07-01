@@ -1,3 +1,22 @@
+How to build ROMs for a10s:
+```sh Prepare for builds (Recommend Ubuntu 20.04 and higher)
+sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev openjdk-11-jdk make zip python-is-python3 libelf-dev dwarves
+```
+```sh Setup repo
+mkdir ~/bin
+PATH=~/bin:$PATH
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+chmod a+x ~/bin/repo
+```
+```sh Download sources
+repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
+repo sync --force-sync
+```
+```sh Build
+. build/envsetup.sh
+lunch lineage_a10s-userdebug
+mka bacon
+```
 Device configuration for Samsung Galaxy A10s (a10s)
 ================================================================
  
